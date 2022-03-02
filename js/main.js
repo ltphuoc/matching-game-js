@@ -31,6 +31,7 @@ function handleTimerFinish() {
   gameStatus = GAME_STATUS.FINISHED;
 
   setTimerText('GAME OVER , TRY AGAIN ');
+  showPlayAgainButton();
 }
 // TODOs
 // 1. Generating colors using https://github.com/davidmerfield/randomColor
@@ -78,7 +79,9 @@ function handleColorClick(liElement) {
     selections[1].classList.remove('active');
     // reset
     selections = [];
-    gameStatus = GAME_STATUS.PLAYING;
+
+    // race condition check with handleTimerFinish
+    if (gameStatus !== GAME_STATUS.FINISHED) gameStatus = GAME_STATUS.PLAYING;
   }, 500);
 }
 
