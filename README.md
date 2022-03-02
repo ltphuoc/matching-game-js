@@ -6,9 +6,8 @@
 ## About The Project
 
 ### Rule
-Choose 2 of the same color for a limited time (now: 30s)
-* WIN: DONE before the time runs out 
-* 
+Find all pairs of same colors
+* WIN: has all pairs of matching colors before the time run out (now: 30s, will update level)
 ### Screenshots
 ![Demo of color matching using JavaScript]()
 
