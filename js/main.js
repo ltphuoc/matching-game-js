@@ -11,6 +11,7 @@ import {
   setTimerText,
   showPlayAgainButton,
   createTimer,
+  setBackgroundColor,
 } from './utils.js';
 // Global variables
 let selections = [];
@@ -56,6 +57,8 @@ function handleColorClick(liElement) {
   const secondColor = selections[1].dataset.color;
   const isMatch = firstColor === secondColor;
   if (isMatch) {
+    // set color when match
+    setBackgroundColor(firstColor);
     // check win
     const isWin = getInActiveColorList().length === 0;
     if (isWin) {
@@ -124,6 +127,8 @@ function resetGame() {
   setTimerText('');
   // new colors
   initColors();
+  // reset background color
+  setBackgroundColor('goldenrod');
   // new game time
   startTimer();
 }

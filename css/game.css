@@ -114,12 +114,3 @@
 .color-list > li:hover {
   background-color: #ddd;
 }
-
-/* ************ */
-/*    FOOTER    */
-/* ************ */
-footer {
-  margin-top: 1rem;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 14px;
-}
